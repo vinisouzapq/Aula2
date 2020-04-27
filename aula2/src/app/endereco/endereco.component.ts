@@ -9,12 +9,12 @@ export class EnderecoComponent implements OnInit {
 
   @Input() location;
   @Input() nome;
-  @Output() attEnd = new EventEmitter();
+  @Output() atualizaEndereco = new EventEmitter();
 
   constructor() { }
 
-  Atualizar(local, cidade, pais) {
-    this.attEnd.emit({ name: this.nome, location: { address: local, city: cidade, country: pais } });
+  Update(local, cidade, pais) {
+    this.atualizaEndereco.emit({ name: this.nome, location: { address: local, city: cidade, country: pais } });
   }
 
 
